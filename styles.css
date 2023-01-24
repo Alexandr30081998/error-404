@@ -14,10 +14,6 @@ a {
   padding: 0;
   margin: 0;
 }
-p {
-  margin: 0;
-  padding: 0;
-}
 
 img {
   margin: 0;
@@ -53,13 +49,24 @@ img {
   font-weight: normal;
   }
 
-.text {
+.text-a {
   display: flex;
   text-align: center;
   font-size: 17px;
   font-weight: normal;
-  flex-direction: row;
+  margin: 0;
+  padding: 0;
 }
+
+.text-p {
+  display: flex;
+  text-align: center;
+  font-size: 17px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
 .bottom-text-box {
   align-self: center;
   justify-content: center;
@@ -70,15 +77,32 @@ img {
 
 .float-text-box {
   align-self: center;
-  text-align: center;
-  width: 420px;
+  justify-content: center;
   display: flex;
-  height: auto;
+  min-height: 0;
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .float-text {
-  display: flex;
   text-align: center;
   font-size: 17px;
   font-weight: normal;
+  width: 420px;
+}
+
+.text-box:hover + .float-text-box  {
+  opacity: 1;
+  min-height: 10px;
+  max-height:1000px ;
+  margin-bottom: 84px;
+  justify-content: center;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.text-box:hover {
+  margin-bottom: 22px;
 }
